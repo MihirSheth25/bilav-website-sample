@@ -19,4 +19,4 @@ However, the entire website could be made dynamic using React/Angular
 
 3. Incorporate React
    * Convert the current page into a react componenet
-   * Create the remaining pages add routes to each page
+   * Create the remaining pages and add routes to each page
