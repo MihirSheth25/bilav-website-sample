@@ -4,12 +4,12 @@ Home page of the 'Bilav Information Services LLP' website
 Page has been made using basic HTML, CSS & JavaScript
 No extra JavaScript libraries have been used
 
-However, the entire website could be made dynamic using React/Angular
+However, the entire website could be made dynamic using **React/Angular**
 
 #### TO-DO
-1. Find a better alternative for the animation code in the HTML
+1. Find a better alternative to the animation code in the HTML
    * The current code adds multiple lines of redundant HTML code
-   * A CodePen animation has been used the link to which is in the comments of the CSS files
+   * A CodePen animation has been used, the link to which is in the comments of the CSS file
    * Find an alternative which looks the same but does not have as many lines of repeating code
 
 2. Rectify latest login time on home page
@@ -19,4 +19,5 @@ However, the entire website could be made dynamic using React/Angular
 
 3. Incorporate React
    * Convert the current page into a react componenet
-   * Create the remaining pages and add routes to each page
+   * Create the remaining pages and components
+   * Add routes to each page in the navbar buttons
