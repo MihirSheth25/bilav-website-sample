@@ -1,0 +1,483 @@
+/* page border div */
+div.maindiv {
+  width: 80%;
+  height: auto;
+  margin: 0 auto auto auto;
+  padding-top: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* logo and login button div */
+div.header {
+  padding: 20px 0 5px 0;
+  border-radius: 10px 10px 0 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* logo image div */
+div.heading {
+  width: auto;
+  box-sizing: border-box;
+}
+
+/* logo image */
+img#logo {
+  width: 500px;
+  height: auto;
+  align-self: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 0 10% 0 10%;
+  box-sizing: border-box;
+}
+
+/* making this div flexbox to display login time and date above login buttons */
+div.welcome {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  width: 250px;
+}
+
+/* making welcome text centered above buttons */
+div#wlcmtext {
+  text-align: right;
+  font-size: 90%;
+  margin: 5px auto 5px;
+  box-sizing: border-box;
+}
+
+/* login button div */
+div#butlogin {
+  display: flex;
+  width: 200px;
+  height: auto;
+  margin-right: 2%;
+  align-self: center;
+}
+
+/* login button */
+#lbutleft {
+  height: 36px;
+  float: left;
+  box-sizing: border-box;
+  margin-right: 4%;
+  width: 48%;
+  border-radius: 30px;
+  font-size: 80%;
+  background-color: #022140;
+  color: whitesmoke;
+  border: none;
+  cursor: pointer;
+}
+
+#lbutleft:hover {
+  background-color: #2d5f5d;
+}
+
+#lbutleft:active {
+  background-color: #20413f;
+}
+
+/* admin login button */
+#lbutright {
+  height: 36px;
+  float: left;
+  box-sizing: border-box;
+  width: 48%;
+  border-radius: 30px;
+  font-size: 85%;
+  background-color: #022140;
+  color: whitesmoke;
+  border: none;
+  cursor: pointer;
+}
+
+#lbutright:hover {
+  background-color: #2d5f5d;
+}
+
+#lbutright:active {
+  background-color: #20413f;
+}
+
+/* making logo and login buttons responsive */
+@media screen and (max-width: 965px) {
+  /* logo and login buttons come below each other */
+  div.header {
+    flex-direction: column;
+  }
+
+  /* making login date and time responsive */
+  div.welcome {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* making text centered over buttons */
+  div#wlcmtext {
+    text-align: center;
+  }
+
+  /* making logo image responsive */
+  img#logo {
+    width: 100%;
+  }
+
+  /* login buttons size stays responsive */
+  div#butlogin {
+    width: 40%;
+  }
+
+  /* logo comes in middle */
+  div.heading {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  /* font inside login button stays responsive */
+  #lbutleft {
+    font-size: 60%;
+    width: 100%;
+    height: 30px;
+    margin: 1%;
+  }
+
+  /* font inside login button stays responsive */
+  #lbutright {
+    font-size: 60%;
+    width: 100%;
+    height: 30px;
+    margin: 1%;
+  }
+}
+
+/* creating animation within block */
+.hwrap {
+  overflow: hidden;
+  margin: 15px auto 0 auto;
+  width: 95%;
+  height: 20px;
+}
+
+/* moving ticker */
+.hmove {
+  display: flex;
+}
+
+/* items arranged horizontally */
+.hitem {
+  flex-shrink: 0;
+  width: auto;
+  box-sizing: border-box;
+  padding-right: 17%;
+  text-align: center;
+  color: #404142;
+  font-size: 13px;
+}
+
+/* animation properties */
+@keyframes tickerh {
+  0% {
+    transform: translate3d(10%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-500%, 0, 0);
+  }
+}
+.hmove {
+  animation: tickerh linear 70s infinite;
+}
+.hmove:hover {
+  animation-play-state: paused;
+}
+
+/* designing top navigation bar */
+.topnav {
+  background-color: #265077;
+  overflow: hidden;
+  margin-top: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* hide the link with the icon that should open and close the topnav on small screens to make it responsive*/
+.topnav .icon {
+  display: none;
+}
+
+/* effects when you hover on a link in topnav */
+.topnav a:hover {
+  background-color: #022140;
+  color: white;
+}
+
+/* when the screen is less than 700 pixels wide, hide all links, except for the first one. */
+@media screen and (max-width: 700px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* the "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. */
+@media screen and (max-width: 700px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* designing side navbar and website data content box */
+.maincontent {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 5%;
+  margin-top: 10px;
+}
+
+/* products and feed section appear below each other and to the left of the page */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+}
+
+/* desing products list inside sidebar flexbox */
+.productsnav {
+  width: 100%;
+  padding: 5%;
+  padding-left: 10%;
+  box-sizing: border-box;
+}
+
+/* gives the products box a shadow to give it a card-like feel */
+.productsnav ul {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 0;
+  margin: 0;
+}
+
+/* main products heading design */
+.productsnav ul h3 {
+  border-bottom: 1px solid #5f6366;
+  border-radius: 8px 8px 0 0;
+  padding-left: 3%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: 0;
+  background-color: #265077;
+  color: whitesmoke;
+}
+
+/* product names and their design. Adding bottom border to give division between each product */
+.productsnav ul li {
+  border-bottom: 1px solid #5f6366;
+  background-color: #41b5c0;
+  list-style: none;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin: 0;
+}
+
+/* removing last item border */
+.productsnav ul li:last-child {
+  border-bottom: none;
+  border-radius: 0 0 8px 8px;
+}
+
+/* sub-heading inside products i.e. "Equities", "Fixed Income". All other properties were difine in '.productsnav ul li' */
+.productsnav ul li h4 {
+  padding-left: 6%;
+  margin: 0;
+}
+
+/* giving background color to h4 headings in products side navbar */
+.productsnav ul li#eqheading,
+.productsnav ul li#fiheading {
+  background-color: #869ad1;
+}
+
+/* designing text of links to products */
+.productsnav ul li a {
+  text-decoration: none;
+  margin-left: 9%;
+  color: white;
+  font-weight: 100;
+}
+
+/* setting visited links color same as unvisited to give button like effect */
+.productsnav ul li a:visited {
+  color: white;
+}
+
+/* designing link hover properties to show effects */
+.productsnav ul li a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+/* desing feeds list inside sidebar flexbox */
+.feedsnav {
+  width: 100%;
+  padding: 5%;
+  padding-left: 10%;
+  box-sizing: border-box;
+}
+
+/* gives the feeds box a shadow to give it a card-like feel */
+.feedsnav ul {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 0;
+  margin: 0;
+}
+
+/* main feeds heading design */
+.feedsnav ul h3 {
+  border-bottom: 1px solid #5f6366;
+  border-radius: 8px 8px 0 0;
+  background-color: #265077;
+  color: whitesmoke;
+  padding-left: 3%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: 0;
+}
+
+/* feed names and their design. Adding bottom border to give division between each feed */
+.feedsnav ul li {
+  border-bottom: 1px solid #5f6366;
+  background-color: #41b5c0;
+  list-style: none;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin: 0;
+}
+
+/* removing last item border */
+.feedsnav ul li:last-child {
+  border-bottom: none;
+  border-radius: 0 0 8px 8px;
+}
+
+/* designing text of links to feeds */
+.feedsnav ul li a {
+  text-decoration: none;
+  margin-left: 9%;
+  color: white;
+  font-weight: 200;
+}
+
+/* setting visited links color same as unvisited to give button like effect */
+.feedsnav ul li a:visited {
+  color: white;
+}
+
+/* designing link hover properties to show effects */
+.feedsnav ul li a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+/* placing text content of website next to sidebar */
+.txtcontent {
+  width: 75%;
+  height: auto;
+  padding: 1%;
+  box-sizing: border-box;
+  margin: 0 auto 0 auto;
+  color: black;
+}
+
+/* RESPONSIVE #1 for sidebar and text content */
+/* making sidebar and text content responsive whon screen width becomes less than 1057px */
+@media screen and (max-width: 1057px) {
+  /* displaying sidebar and text content below each other instead of next to */
+  .maincontent {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  /* displaying products and field boxes next to each other instead on one below the other */
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  /* making products box width and feeds box width equal */
+  .productsnav {
+    padding-left: 2%;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  /* making products box width and feeds box width equal */
+  .feedsnav {
+    padding: 2%;
+    width: 100%;
+  }
+
+  /* making text span across enitre screen */
+  .txtcontent {
+    width: 100%;
+    padding: 5%;
+  }
+}
+
+/* RESPONSIVE #2 for sidebar and text content */
+/* making sidebar and text content responsive whon screen width becomes less than 600px */
+@media screen and (max-width: 600px) {
+  div.maindiv {
+    width: 100%;
+  }
+
+  /* dsiplaying products and fields boxes one below the other again */
+
+  .sidebar {
+    flex-direction: column;
+  }
+
+  /* no need to change width of products box to make it span entire screen as it was already 100% in RESPONSIVE#1 */
+  .productsnav {
+    padding: 4%;
+  }
+
+  /* no need to change width of feeds box to make it span entire screen as it was already 100% in RESPONSIVE#1 */
+  .feedsnav {
+    padding: 4%;
+  }
+}
